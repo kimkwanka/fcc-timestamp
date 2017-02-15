@@ -1,23 +1,36 @@
 const express = require('express');
-const http = require("http");
+const http = require('http');
+const path = require('path');
+const stylus = require('stylus');
 
 const app = express();
 
 const port = 8080;
 
-app.set("views", __dirname + "/views");
-app.set("view engine", "pug");
+app.set('views', path.join(__dirname, '/views'));
+app.set('view engine', 'pug');
 
-app.get("/", function(req, res, next) {
-  res.render("index", {message: 'Index Page'});  
+app.get('/', function(req, res, next) {
+  res.render('index', {title: 'FCC Timestamp Microservice'});  
 });
+// function compile(str, path) {
+//   return stylus(str)
+//     .set('filename', path)
+//     .use(nib())
+// }
+// app.use(stylus.middleware(
+//   { src: __dirname + '/public'
+//   , compile: compile
+//   }
+// ))
+// app.use(express.static(__dirname + '/public'))
 
 //Prevent browser's favicon request from triggering our microservice 
 app.get('/favicon.ico', function(req, res) {
     res.sendStatus(204);
 });
 
-app.get("/:dateStr", function(req, res, next) {
+app.get('/:dateStr', function(req, res, next) {
   let date
   let unixtime = parseInt(req.params.dateStr, 10);
   let offset
@@ -40,7 +53,7 @@ app.get("/:dateStr", function(req, res, next) {
     offset = 0;
   }
 
-  //If param was interpreted as a "valid date", build the JSON data to return
+  //If param was interpreted as a 'valid date', build the JSON data to return
   if (!isNaN(date.getTime())) {
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
                 'August', 'September', 'October', 'November', 'December'];
@@ -57,8 +70,8 @@ app.get("/:dateStr", function(req, res, next) {
   res.json(timestamp);
 });
 
-app.get("*", function(req, res) {
-  res.render("404", {});
+app.get('*', function(req, res) {
+  res.render('404', {});
 });
 
 app.listen(port);
