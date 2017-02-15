@@ -12,9 +12,10 @@ app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'pug');
 
 app.get('/', function(req, res, next) {
-  res.render('index', {title: 'FCC Timestamp Microservice'});  
+  res.render('index', {title: 'FCC Timestamp Microservice', url:'https://kk-fcc-timestamp.herokuapp.com'});  
 });
 
+/*//Enable Stylus preprocessor as middleware
 app.use(stylus.middleware({
     src: path.join(__dirname, '/res'),
     dest: path.join(__dirname, '/public'),
@@ -24,8 +25,7 @@ app.use(stylus.middleware({
       .set('compress', true);
     })
 }));
-
-app.use( express.static(path.join(__dirname, 'public')) );
+app.use( express.static(path.join(__dirname, 'public')) );*/
 
 //Prevent browser's favicon request from triggering our microservice 
 app.get('/favicon.ico', function(req, res) {
