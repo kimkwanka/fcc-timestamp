@@ -3,9 +3,9 @@ Timestamp microservice using nodejs and express.
 
 Example usage:
 ```
-app.url/December%2015,%202015
+your.app.url/December%2015,%202015
 
-app.url/1450137600
+your.app.url/1450137600
 ```
 
 Example output:
