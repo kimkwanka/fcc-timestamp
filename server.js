@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'pug');
 
 app.get('/', function(req, res, next) {
-  res.render('index', {title: 'FCC Timestamp Microservice', url:'https://kk-fcc-timestamp.herokuapp.com'});  
+  res.render('index', {title: 'Kim Kwanka\'s Timestamp Microservice', url:'https://kk-fcc-timestamp.herokuapp.com'});  
 });
 
 /*//Enable Stylus preprocessor as middleware
