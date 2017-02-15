@@ -5,7 +5,7 @@ const stylus = require('stylus');
 
 const app = express();
 
-const port = 8080;
+const port = 80;
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'pug');
