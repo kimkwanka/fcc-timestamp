@@ -2,7 +2,7 @@
 Timestamp microservice using nodejs and express.
 
 Example usage:
- ```
+```
 app.url/December%2015,%202015
 
 app.url/1450137600
