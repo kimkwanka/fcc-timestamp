@@ -13,17 +13,18 @@ app.set('view engine', 'pug');
 app.get('/', function(req, res, next) {
   res.render('index', {title: 'FCC Timestamp Microservice'});  
 });
-// function compile(str, path) {
-//   return stylus(str)
-//     .set('filename', path)
-//     .use(nib())
-// }
-// app.use(stylus.middleware(
-//   { src: __dirname + '/public'
-//   , compile: compile
-//   }
-// ))
-// app.use(express.static(__dirname + '/public'))
+
+app.use(stylus.middleware({
+    src: path.join(__dirname, '/res'),
+    dest: path.join(__dirname, '/public'),
+    compile: ((str, filepath) => {
+      return stylus(str)
+      .set('filename', filepath)
+      .set('compress', true);
+    })
+}));
+
+app.use( express.static(path.join(__dirname, 'public')) );
 
 //Prevent browser's favicon request from triggering our microservice 
 app.get('/favicon.ico', function(req, res) {
