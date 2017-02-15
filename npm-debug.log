@@ -1,5 +1,5 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@3.10.10
 3 info using node@v6.9.5
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
@@ -7,25 +7,25 @@
 6 silly lifecycle fcc-timestamp@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle fcc-timestamp@1.0.0~start: fcc-timestamp@1.0.0
 8 verbose lifecycle fcc-timestamp@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle fcc-timestamp@1.0.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/strega/dev/fcc-timestamp/node_modules/.bin:/home/strega/bin:/home/strega/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-10 verbose lifecycle fcc-timestamp@1.0.0~start: CWD: /home/strega/dev/fcc-timestamp
+9 verbose lifecycle fcc-timestamp@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/strega/dev/fcc-timestamp/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+10 verbose lifecycle fcc-timestamp@1.0.0~start: CWD: /Users/strega/dev/fcc-timestamp
 11 silly lifecycle fcc-timestamp@1.0.0~start: Args: [ '-c', 'node server.js' ]
 12 silly lifecycle fcc-timestamp@1.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle fcc-timestamp@1.0.0~start: Failed to exec start script
 14 verbose stack Error: fcc-timestamp@1.0.0 start: `node server.js`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at ChildProcess.emit (events.js:191:7)
 14 verbose stack     at maybeClose (internal/child_process.js:877:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid fcc-timestamp@1.0.0
-16 verbose cwd /home/strega/dev/fcc-timestamp
-17 error Linux 4.8.0-34-generic
-18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
+16 verbose cwd /Users/strega/dev/fcc-timestamp
+17 error Darwin 16.3.0
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 19 error node v6.9.5
 20 error npm  v3.10.10
 21 error code ELIFECYCLE
