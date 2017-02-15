@@ -1,1 +1,0 @@
-*{box-sizing:border-box}body,html{height:100%;margin:0}.stickyFooterWrapper{min-height:100%;margin-bottom:-80px;}.stickyFooterWrapper:after{content:"";display:block;height:80px}header{background:#efeff9}footer{position:relative;height:80px;background:#efeff9;text-align:center;}footer a{position:absolute;top:25px;left:50%;transform:translate(-50%)}
